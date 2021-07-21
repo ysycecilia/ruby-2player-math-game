@@ -10,7 +10,7 @@ class GameQuestion
     a = rand(1..20)
     b = rand(1..20)
     @answer = a + b
-    puts "what does #{a} plus #{b} equal?"
+    "what does #{a} plus #{b} equal?"
   end
 
   def answerCorrect?(input)
@@ -20,7 +20,7 @@ class GameQuestion
  
     return false
   end
-  
+
 end
 
 # q1 = GameQuestion.new 

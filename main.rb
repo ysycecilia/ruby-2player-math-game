@@ -16,9 +16,12 @@ game = MathGame.new(player1, player2)
 
 # if all lives > 0, create a new question
 while (game.players[0].lives > 0 && game.players[1].lives > 0) do
-  
+
   question = GameQuestion.new
-  puts "Player #{game.current_player.name}: #{question.askQuestion} "
+  name = game.current_player.name
+  
+  puts "Player #{name}: #{question.askQuestion}"
+
   answer = gets.chomp.to_i
   result = question.answerCorrect?(answer)
 
