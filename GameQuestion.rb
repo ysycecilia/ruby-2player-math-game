@@ -12,8 +12,18 @@ class GameQuestion
     @answer = a + b
     puts "what does #{a} plus #{b} equal?"
   end
+
+  def answerCorrect?(input)
+    if input.to_i == answer
+      return true
+    end
+ 
+    return false
+  end
   
 end
+
 # q1 = GameQuestion.new 
 # q1.askQuestion
 # puts q1.answer
+# puts q1.answerCorrect?(gets.chomp)
